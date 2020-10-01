@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  workspace:
+    image: node
+    volumes:
+      - ".:/mnt/workspace"
+    working_dir: "/mnt/workspace"
+    entrypoint: "/bin/bash -c"
+    command:
+      - |
+        CI=true npm start || (\
+          echo "⛔ \`npm start\` failed, but the container is running..." && \
+          tail -f /dev/null \
+        )
+    ports:
+      - 3000:3000

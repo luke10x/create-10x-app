@@ -1,0 +1,20 @@
+{
+  "name": "create-10x-app",
+  "version": "0.2.0",
+  "description": "Quick starter for 10x apps",
+  "main": "index.js",
+  "bin": {
+    "create-10x-app": ".bin/create-10x-app.js"
+  },
+  "scripts": {
+    "c10x": "node ./.bin/create-10x-app.js --template=battle ./direc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Luke 10x",
+  "license": "ISC",
+  "dependencies": {
+    "github-files-fetcher": "^1.6.0",
+    "yargs": "^16.0.3"
+  }
+}
