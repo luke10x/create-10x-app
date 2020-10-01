@@ -27,7 +27,7 @@ if (argv._.length >= 1) {
 }
 
 const templateUrls = {
-  battle: 'https://github.com/luke10x/battle/tree/main/'
+  battle: 'https://github.com/luke10x/battle/tree/main/.'
 }
 if (templateUrls[argv.template] === undefined) {
     console.error("template must be one of these:", Object.keys(templateUrls).join(", "))
