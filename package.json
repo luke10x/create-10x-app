@@ -1,6 +1,6 @@
 {
   "name": "create-10x-app",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Quick starter for 10x apps",
   "main": "index.js",
   "bin": {
