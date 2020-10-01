@@ -19,9 +19,10 @@ const argv = yargs
 let folderName = '.';
 
 if (argv._.length >= 1) {
-  folderName = process.argv[0];
+  folderName = argv._[0];
   if (!fs.existsSync(folderName)) {
     fs.mkdirSync(folderName);
+    console.log(`Created folder: ${folderName}`);
   }
 }
 
