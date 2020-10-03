@@ -1,6 +1,6 @@
 {
   "name": "create-10x-app",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Quick starter for 10x apps",
   "main": "index.js",
   "bin": {
@@ -14,7 +14,7 @@
   "author": "Luke 10x",
   "license": "ISC",
   "dependencies": {
-    "github-files-fetcher": "^1.6.0",
+    "degit": "^2.8.0",
     "yargs": "^16.0.3"
   }
 }
