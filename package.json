@@ -1,13 +1,13 @@
 {
   "name": "create-10x-app",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Quick starter for 10x apps",
   "main": "index.js",
   "bin": {
     "create-10x-app": ".bin/create-10x-app.js"
   },
   "scripts": {
-    "c10x": "node ./.bin/create-10x-app.js --template=battle ./direc",
+    "c10x": "node ./.bin/create-10x-app.js --template=battle ./battle",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

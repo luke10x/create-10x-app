@@ -27,7 +27,7 @@ if (argv._.length >= 1) {
 }
 
 const templateUrls = {
-  battle: 'https://github.com/luke10x/battle#main'
+  battle: 'https://github.com/luke10x/battle#create-10x-app'
 }
 if (templateUrls[argv.template] === undefined) {
     console.error("template must be one of these:", Object.keys(templateUrls).join(", "))
@@ -35,16 +35,19 @@ if (templateUrls[argv.template] === undefined) {
 }
 const repoUrl = templateUrls[argv.template];
 
+console.log("🤖 creating app using 10x template: ", require("../package").version);
+
 const fetch = spawn("degit", [
   repoUrl,
   folderName
 ]);
 
-fetch.on("close", code => {
-  if (code !== 0) {
-    console.error("cloning the template failed!")
-    process.exit(code);
-  } else {
-    console.log("10x app installed! 👍");
-  }
-});
+fetch
+  .on("close", code => {
+    if (code !== 0) {
+      console.error("cloning the template failed!")
+      process.exit(code);
+    } else {
+      console.log("10x app created! 👍");
+    }
+  });
