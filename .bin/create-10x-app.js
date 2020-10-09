@@ -27,7 +27,7 @@ if (argv._.length >= 1) {
 }
 
 const templateUrls = {
-  battle: 'https://github.com/luke10x/battle#create-10x-app'
+  battle: 'https://github.com/luke10x/10x-app-templates/battle#create-10x-app'
 }
 if (templateUrls[argv.template] === undefined) {
     console.error("template must be one of these:", Object.keys(templateUrls).join(", "))
