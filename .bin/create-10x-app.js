@@ -30,7 +30,13 @@ const templateUrls = {
   battle: 'https://github.com/luke10x/10x-app-templates/battle#main'
 }
 if (templateUrls[argv.template] === undefined) {
-    console.error("template must be one of these:", Object.keys(templateUrls).join(", "))
+    console.error(
+      "template must be one of these:",
+      Object.keys(templateUrls)
+        .map(name => `"${name}"`)
+        .join(", "),
+      `(but it was: "${argv.template}")`
+    )
     process.exit(-1);
 }
 const repoUrl = templateUrls[argv.template];
